@@ -1,0 +1,56 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+}
+
+.header {
+  display: flex;
+  flex-shrink: 0;
+  gap: 4px;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 8px 0 16px;
+}
+
+.heading {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.connection {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin: 2px 0 0;
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  background: var(--color-warning);
+  border-radius: 50%;
+}
+
+.connection[data-status='online'] .dot {
+  background: var(--color-success);
+}
+
+.connection[data-status='unauthorized'] .dot {
+  background: var(--color-danger);
+}

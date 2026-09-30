@@ -1,0 +1,25 @@
+.banner {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--color-warning);
+  background: color-mix(in srgb, var(--color-warning) 12%, var(--color-surface));
+  border-bottom: 1px solid var(--color-border);
+}
+
+.text {
+  flex: 1;
+  color: var(--color-text);
+}
+
+.banner[data-tone='success'] {
+  color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 12%, var(--color-surface));
+}
+
+.error {
+  color: var(--color-danger);
+}

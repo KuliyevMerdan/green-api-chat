@@ -1,0 +1,24 @@
+.empty {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.empty p {
+  max-width: 280px;
+  margin: 0;
+}
+
+.icon {
+  display: inline-flex;
+  padding: 18px;
+  color: #fff;
+  background: var(--brand-gradient);
+  border-radius: 50%;
+}

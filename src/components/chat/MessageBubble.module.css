@@ -1,0 +1,94 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.row[data-direction='outgoing'] {
+  align-items: flex-end;
+}
+
+.row[data-group-start] {
+  margin-top: 8px;
+}
+
+.bubble {
+  position: relative;
+  max-width: min(75%, 560px);
+  padding: 7px 12px 7px;
+  color: var(--bubble-in-text);
+  overflow-wrap: anywhere;
+  background: var(--bubble-in);
+  border-radius: var(--radius-l);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 8%);
+}
+
+.row[data-direction='incoming'][data-group-start] .bubble {
+  border-top-left-radius: 6px;
+}
+
+.row[data-direction='outgoing'] .bubble {
+  color: var(--bubble-out-text);
+  background: var(--bubble-out);
+}
+
+.row[data-direction='outgoing'][data-group-start] .bubble {
+  border-top-right-radius: 6px;
+}
+
+.bubble[data-status='failed'] {
+  opacity: 0.75;
+}
+
+.text {
+  white-space: pre-wrap;
+}
+
+.unsupported {
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* Время «обтекается» текстом, как в мессенджерах: float справа внизу. */
+.meta {
+  position: relative;
+  bottom: -4px;
+  display: inline-flex;
+  float: right;
+  gap: 3px;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+  user-select: none;
+}
+
+.row[data-direction='outgoing'] .meta {
+  color: var(--bubble-out-meta);
+}
+
+.status {
+  display: inline-flex;
+}
+
+.status[data-status='read'] {
+  color: #7ee0ff;
+}
+
+.status[data-status='failed'] {
+  color: #ffd2d3;
+}
+
+.retry {
+  padding: 2px 4px;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--color-danger);
+  background: none;
+  border: none;
+}
+
+.retry:hover {
+  text-decoration: underline;
+}
