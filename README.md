@@ -10,6 +10,19 @@
 Тип определяется автоматически при входе по полю `typeInstance` из `getSettings`:
 `v3` — MAX, `telegram` — Telegram.
 
+## Скриншоты
+
+![Чат](docs/screenshots/02-chat.png)
+
+| Вход                                   | Новый чат                                      |
+| -------------------------------------- | ---------------------------------------------- |
+| ![Вход](docs/screenshots/01-login.png) | ![Новый чат](docs/screenshots/03-new-chat.png) |
+
+<p>
+  <img src="docs/screenshots/04-mobile-list.png" alt="Список чатов на телефоне" width="260" />
+  <img src="docs/screenshots/05-mobile-chat.png" alt="Чат на телефоне" width="260" />
+</p>
+
 ## Возможности
 
 - Вход по `apiUrl`, `idInstance` и `apiTokenInstance`. Перед входом проверяется состояние
