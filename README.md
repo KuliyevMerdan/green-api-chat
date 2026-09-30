@@ -1,5 +1,7 @@
 # MAX Chat · GREEN-API
 
+**Демо:** https://green-api-chat-drab.vercel.app
+
 Тестовое задание на позицию «Фронтенд-разработчик React». Это веб-интерфейс для отправки
 и получения текстовых сообщений в мессенджере **MAX** через [GREEN-API](https://green-api.com/max).
 Внешний вид сделан по мотивам [web.max.ru](https://web.max.ru/).
