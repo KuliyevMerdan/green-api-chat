@@ -1,0 +1,130 @@
+/* Палитра по мотивам web.max.ru: тёмная тема по умолчанию, светлая — по настройкам системы. */
+:root {
+  color-scheme: dark;
+
+  --color-bg: #111113;
+  --color-surface: #1b1c1f;
+  --color-surface-raised: #232428;
+  --color-surface-hover: #2a2b30;
+  --color-surface-active: #2f3a52;
+  --color-border: #2c2d31;
+  --color-text: #f2f3f5;
+  --color-text-secondary: #9a9ca3;
+  --color-text-tertiary: #6d6f76;
+  --color-accent: #3f86f5;
+  --color-accent-hover: #5a97f7;
+  --color-accent-text: #ffffff;
+  --color-danger: #f0575c;
+  --color-success: #3ccf7a;
+  --color-warning: #f2b84b;
+
+  --bubble-in: #26272b;
+  --bubble-in-text: var(--color-text);
+  --bubble-out: #2c64d8;
+  --bubble-out-text: #ffffff;
+  --bubble-out-meta: rgb(255 255 255 / 70%);
+
+  --chat-bg: #151619;
+  --brand-gradient: linear-gradient(135deg, #38c7ff 0%, #3f6cf6 50%, #9b45f0 100%);
+
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 18px;
+  --radius-xl: 24px;
+
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+
+  --sidebar-width: 360px;
+  --header-height: 60px;
+  --transition-fast: 120ms ease;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --color-bg: #eef0f3;
+    --color-surface: #ffffff;
+    --color-surface-raised: #f3f4f6;
+    --color-surface-hover: #eceef2;
+    --color-surface-active: #e1ebff;
+    --color-border: #e3e5e9;
+    --color-text: #16171a;
+    --color-text-secondary: #6b6e76;
+    --color-text-tertiary: #9a9ca3;
+    --color-accent: #2f74ed;
+    --color-accent-hover: #1f63da;
+
+    --bubble-in: #ffffff;
+    --bubble-out: #2f74ed;
+
+    --chat-bg: #f4f5f7;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+/* :where() обнуляет специфичность, чтобы компоненты могли переопределить обводку. */
+:where(:focus-visible) {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
